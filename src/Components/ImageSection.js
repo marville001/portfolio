@@ -6,7 +6,7 @@ function ImageSection() {
     return (
         <div className="ImageSection">
             <div className="img">
-                <img src={me} style={{width:"300px"}} alt=""/>
+                <img src={me} alt=""/>
             </div>
             <div className="about-info">
                 <h4>I am<span> Martin Mwangi</span></h4>
