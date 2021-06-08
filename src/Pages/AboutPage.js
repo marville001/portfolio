@@ -14,14 +14,13 @@ function AboutPage() {
             <ImageSection />
             <Tittle title={'My Skills'} span={'My Skills'} />
             <div className="skillsContainer">
-                <SkillsSection skill={'Javascript'} progress={'60%'} width={'60%'} />
-                <SkillsSection skill={'Typescript'} progress={'30%'} width={'30%'} />
-                <SkillsSection skill={'React Js'} progress={'70%'} width={'70%'} />
+                <SkillsSection skill={'Javascript'} progress={'80%'} width={'80%'} />
+                <SkillsSection skill={'Typescript'} progress={'60%'} width={'60%'} />
+                <SkillsSection skill={'React Js'} progress={'90%'} width={'90%'} />
                 <SkillsSection skill={'Node Js'} progress={'80%'} width={'80%'} />
-                <SkillsSection skill={'Python'} progress={'90%'} width={'90%'} />
-                <SkillsSection skill={'Lua'} progress={'40%'} width={'40%'} />
-                <SkillsSection skill={'Java'} progress={'80%'} width={'80%'} />
-                <SkillsSection skill={'Web Design'} progress={'25%'} width={'25%'} />
+                <SkillsSection skill={'Python'} progress={'60%'} width={'60%'} />
+                <SkillsSection skill={'Java'} progress={'65%'} width={'65%'} />
+                <SkillsSection skill={'Web Design'} progress={'50%'} width={'50%'} />
                 <SkillsSection skill={'UI/Ux Design'} progress={'76%'} width={'76%'} />
             </div>
 
@@ -36,8 +35,6 @@ function AboutPage() {
                 <ServicesSection image={gamedev} title={'Game Development'} 
                 text={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
                 />
-
-                
             </div>
 
         </div>

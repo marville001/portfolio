@@ -6,7 +6,7 @@ function ImageSection() {
     return (
         <div className="ImageSection">
             <div className="img">
-                <img src={me} alt=""/>
+                <img src={me} style={{width:"300px"}} alt=""/>
             </div>
             <div className="about-info">
                 <h4>I am<span> Lorem Ipsum</span></h4>
@@ -25,12 +25,12 @@ function ImageSection() {
                         <p>Countries</p>
                     </div>
                     <div className="right-section">
-                        <p>: Lorem Ipsum</p>
-                        <p>: 50</p>
-                        <p>: French</p>
-                        <p>: French, Spanish, English</p>
-                        <p>: 2 Beightbridge, BN7 GB9, United kingdom</p>
-                        <p>: France, Spain, Germany</p>
+                        <p>: Martin Mwangi Wanjiku</p>
+                        <p>: 21</p>
+                        <p>: Kenyan</p>
+                        <p>: English, Kiswahili, Kikuyu</p>
+                        <p>: 347-10200, Murang'a</p>
+                        <p>: Kenya</p>
                     </div>
                 </div>
                 <button className="btn">Download Cv</button>
