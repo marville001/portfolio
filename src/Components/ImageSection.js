@@ -9,7 +9,7 @@ function ImageSection() {
                 <img src={me} style={{width:"300px"}} alt=""/>
             </div>
             <div className="about-info">
-                <h4>I am<span> Lorem Ipsum</span></h4>
+                <h4>I am<span> Martin Mwangi</span></h4>
                 <p className="about-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Voluptatum necessitatibus perferendis numquam dolorem cumque facilis.
