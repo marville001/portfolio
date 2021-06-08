@@ -3,13 +3,14 @@ import Categories from '../Components/Categories';
 import MenuItems from '../Components/MenuItems';
 import Tittle from '../Components/Tittle';
 import portfolios from '../Components/allportfolios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const allCategories = ['All', ...new Set(portfolios.map(item => item.category))];
 
 function PortfoliosPage() {
-    const [categories, setCategories] = useState(allCategories);
+    const [categories, setCategories] = useState([]);
     const [menuItems, setMenuItems] = useState(portfolios);
+    
 
     const filter = (category) =>{
         if(category === 'All'){
@@ -21,6 +22,9 @@ function PortfoliosPage() {
         })
         setMenuItems(filteredData);
     }
+    useEffect(() => {
+        setCategories(allCategories)
+    }, [])
 
     return (
         <div className="PortfolioPage">

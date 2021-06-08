@@ -1,5 +1,5 @@
 import React from 'react';
-import about from '../img/about.jpg';
+// import about from '../img/about.jpg';
 import me from '../img/me-full.jpg';
 
 function ImageSection() {
