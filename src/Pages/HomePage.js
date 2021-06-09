@@ -53,7 +53,7 @@ function HomePage() {
             target="_blank"
             className="icon-holder"
           >
-            <img src={fiverr} />
+            <img src={fiverr} alt="Fiverr" />
           </Link>
         </div>
       </header>
