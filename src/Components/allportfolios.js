@@ -7,9 +7,19 @@ import port6 from '../img/portImages/portfolio.png';
 
 const portfolios = [
     {
+        id: 6,
+        category: 'React Js',
+        link1: 'https://github.com/marville001/portfolio',
+        link2: 'https://martinmwangi.netlify.app/',
+        icon1: 'G',
+        icon2: 'W',
+        image: port6,
+        title: 'My Portfolio'
+    },
+    {
         id: 1,
         category: 'React Js',
-        link1: 'www.github.com',
+        link1: 'https://github.com/marville001/covid-19-tracker',
         link2: 'https://tracker-covid19-001.netlify.app/',
         icon1: 'G',
         icon2: 'W',
@@ -29,17 +39,17 @@ const portfolios = [
     {
         id: 3,
         category: 'React Js',
-        link1: 'www.github.com',
+        link1: 'https://github.com/marville001/react-ashop',
         link2: 'https://a-shop.netlify.app/',
         icon1: 'G',
         icon2: 'W',
         image: port3,
-        title: 'Ecomerce Website'
+        title: 'Ecommerce Website'
     },
     {
         id: 4,
         category: 'React Js',
-        link1: 'www.github.com',
+        link1: 'https://github.com/marville001/Budget-App',
         link2: 'https://budgetapp001.netlify.app/',
         icon1: 'G',
         icon2: 'W',
@@ -49,23 +59,14 @@ const portfolios = [
     {
         id: 5,
         category: 'React Js',
-        link1: 'www.github.com',
+        link1: 'https://github.com/marville001/Creative-Agency',
         link2: 'https://agency001.netlify.app/',
         icon1: 'G',
         icon2: 'W',
         image: port5,
         title: 'Agency Responsive Website'
     },
-    {
-        id: 6,
-        category: 'React Js',
-        link1: 'www.github.com',
-        link2: 'https://martinmwangi.netlify.app/',
-        icon1: 'G',
-        icon2: 'W',
-        image: port6,
-        title: 'My Portfolio'
-    },
+    
 ]
 
 export default portfolios;
