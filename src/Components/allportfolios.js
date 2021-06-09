@@ -1,81 +1,71 @@
-import port1 from '../img/portImages/maya-1.jpg';
-import port2 from '../img/portImages/port1.jpg';
-import port3 from '../img/portImages/port2.jpg';
-import port4 from '../img/portImages/port3.jpg';
-import port6 from '../img/portImages/port5.jpg';
-import port7 from '../img/portImages/port6.jpg';
+import port1 from '../img/portImages/covidTracker.png';
+import port2 from '../img/portImages/faceDetector.png';
+import port3 from '../img/portImages/ashop.png';
+import port4 from '../img/portImages/budgetApp.png';
+import port5 from '../img/portImages/agencySite.png';
+import port6 from '../img/portImages/portfolio.png';
 
 const portfolios = [
     {
         id: 1,
-        category: 'Animation',
-        link1: 'www.youtube.com',
-        link2: 'www.github.com',
+        category: 'React Js',
+        link1: 'www.github.com',
+        link2: 'https://tracker-covid19-001.netlify.app/',
         icon1: 'G',
-        icon2: 'Y',
+        icon2: 'W',
         image: port1,
-        title: 'Autodesk Maya'
+        title: 'Covid 19 Tracker'
     },
     {
         id: 2,
-        category: 'Python',
-        link1: 'www.youtube.com',
-        link2: 'www.github.com',
+        category: 'React Js',
+        link1: 'www.github.com',
+        link2: 'https://www.marville001.ml/',
         icon1: 'G',
-        icon2: 'Y',
+        icon2: 'W',
         image: port2,
-        title: 'Python Web Scrapping'
+        title: 'Face Detector App'
     },
     {
         id: 3,
-        category: 'Animation',
-        link1: 'www.youtube.com',
-        link2: 'www.github.com',
+        category: 'React Js',
+        link1: 'www.github.com',
+        link2: 'https://a-shop.netlify.app/',
         icon1: 'G',
-        icon2: 'Y',
+        icon2: 'W',
         image: port3,
-        title: 'Autodesk Maya'
+        title: 'Ecomerce Website'
     },
     {
         id: 4,
-        category: 'Javascript',
-        link1: 'www.youtube.com',
-        link2: 'www.github.com',
+        category: 'React Js',
+        link1: 'www.github.com',
+        link2: 'https://budgetapp001.netlify.app/',
         icon1: 'G',
-        icon2: 'Y',
+        icon2: 'W',
         image: port4,
-        title: 'Vanilla Javascript Website'
+        title: 'Simple BudgetApp'
     },
     {
         id: 5,
         category: 'React Js',
-        link1: 'www.youtube.com',
-        link2: 'www.github.com',
+        link1: 'www.github.com',
+        link2: 'https://agency001.netlify.app/',
         icon1: 'G',
-        icon2: 'Y',
-        image: port6,
-        title: 'Getting Started With React'
+        icon2: 'W',
+        image: port5,
+        title: 'Agency Responsive Website'
     },
     {
         id: 6,
         category: 'React Js',
-        link1: 'www.youtube.com',
-        link2: 'www.github.com',
+        link1: 'www.github.com',
+        link2: 'https://martinmwangi.netlify.app/',
         icon1: 'G',
-        icon2: 'Y',
-        image: port7,
-        title: 'Vanilla Javascript Website'
+        icon2: 'W',
+        image: port6,
+        title: 'My Portfolio'
     },
-    {
-        id: 7,
-        category: 'Test Port',
-        link1: 'www.youtube.com',
-        link2: 'www.github.com',
-        icon1: 'G',
-        icon2: 'Y',
-        image: port4,
-        title: 'Vanilla Javascript Website'
-    }
 ]
 
 export default portfolios;

@@ -1,6 +1,7 @@
 .App{
     .sidebar{
         width: 16%;
+        min-width: 300px;
         height: 100vh;
         background-color: #191D2B;
         position: fixed;
@@ -24,8 +25,8 @@
     }
 
     .main-content{
-        width: 84%;
-        margin-left: 16%;
+        width: calc(100% - 300px);
+        margin-left: 300px;
         background-color: #10121B;
         min-height: 100vh;
         background-image: url(../img/dots.svg);
