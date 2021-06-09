@@ -9,7 +9,7 @@ function ContactPage() {
     return (
         <div>
             <div className="title">
-                <Tittle title={'About Me'} span={'About Me'} />
+                <Tittle title={'My Contacts'} span={'My Contacts'} />
             </div>
             <div className="ContactPage">
                 <div className="map-sect">
@@ -22,6 +22,10 @@ function ContactPage() {
                     <ContactItem icon={location} text1={'347-10200, Muranga'} text2={'Kenya'} title={'Address'}/>
                 </div>
             </div>
+            <div className="title">
+                <Tittle title={'Get In Touch'} span={'Get In Touch'} />
+            </div>
+
         </div>
     )
 }

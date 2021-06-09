@@ -11,9 +11,7 @@ function ImageSection() {
             <div className="about-info">
                 <h4>I am<span> Martin Mwangi</span></h4>
                 <p className="about-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Voluptatum necessitatibus perferendis numquam dolorem cumque facilis.
-                    Desir per po la ta doso vi slone ve?
+                I am a Computer Science student in the Department of Computer Science at Dedan Kimathi University of Technology graduating in November 2021.
                 </p>
                 <div className="about-details">
                     <div className="left-section">
