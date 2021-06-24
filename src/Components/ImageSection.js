@@ -1,6 +1,7 @@
 import React from 'react';
 // import about from '../img/about.jpg';
 import me from '../img/me-full.jpg';
+import resume from "../resume.pdf"
 
 function ImageSection() {
     return (
@@ -31,7 +32,8 @@ function ImageSection() {
                         <p>: Kenya</p>
                     </div>
                 </div>
-                <button className="btn">Download Cv</button>
+                
+                <a href={resume} download="resume.pdf" style={{display: "inline-block"}} className="btn">Download Cv</a>
             </div>
         </div>
     )
