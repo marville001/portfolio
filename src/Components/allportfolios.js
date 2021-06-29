@@ -48,7 +48,7 @@ const portfolios = [
     },
     {
         id: 4,
-        category: 'React Js',
+        category: 'Vanilla Js',
         link1: 'https://github.com/marville001/Budget-App',
         link2: 'https://budgetapp001.netlify.app/',
         icon1: 'G',
@@ -58,7 +58,7 @@ const portfolios = [
     },
     {
         id: 5,
-        category: 'React Js',
+        category: 'Vanilla Js',
         link1: 'https://github.com/marville001/Creative-Agency',
         link2: 'https://agency001.netlify.app/',
         icon1: 'G',
