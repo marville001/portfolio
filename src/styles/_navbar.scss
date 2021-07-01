@@ -1,11 +1,20 @@
 .NavBar{
     height: 100vh;
+    @media screen and (min-width: 700px){
+        height: 15vh;
+        overflow-y: hidden;
+    }
     .nav{
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        @media screen and (min-width: 700px){
+            flex-direction: row;
+            padding: 0px 50px;
+        }
 
         .profile{
             width: 100%;
@@ -18,13 +27,29 @@
                 border: 5px solid #2e344e;
                 margin-bottom: 1rem;
             }
+            @media screen and (min-width: 700px){
+                width: 100px;
+                margin: 0px;
+                border: none;
+                .img{
+                    width: 100%;
+                }
+            }
         }
 
         .nav-items{
             width: 100%;
+            @media screen and (min-width: 700px){
+                display: flex;
+                justify-content: flex-end;
+            }
             .nav-item{
                 list-style: none;
                 text-align: center;
+                @media screen and (min-width: 700px){
+                    margin: 0px 20px;
+                }
+
                 a{
                     text-decoration: none;
                     font-size: inherit;
@@ -37,17 +62,19 @@
                         position: absolute;
                         top: 0;
                         left: 0;
-                        width: .4rem;
+                        width: .6rem;
                         height: 100%;
                         background-color: #0381ff33;
                         transform-origin: bottom;
                         transform: scale(0);
                         overflow-x: hidden;
                         transition: transform .6s, .2s width .5s cubic-bezier(1,-0.16,.6,1.35);
+                        
                     }
 
                     &:hover::before{
-                        width: 100%;
+                        left: -10px;
+                        width: calc(100% + 20px);
                         transform: scale(1);
                     }
                 }
@@ -61,10 +88,16 @@
                 text-align: center;
                 padding: 1rem 0;
             }
+            @media screen and (min-width: 700px){
+                display: none;
+            }
         }
     }
 }
 
 .active{
     background-color: #037FFF;
+    @media screen and (min-width: 700px){
+        padding: 8px 20px !important;
+    }
 }

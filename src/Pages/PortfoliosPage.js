@@ -20,6 +20,7 @@ function PortfoliosPage() {
         const filteredData  = portfolios.filter((item)=>{
             return item.category === category;
         })
+        
         setMenuItems(filteredData);
     }
     useEffect(() => {
