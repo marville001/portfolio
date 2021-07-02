@@ -1,43 +1,48 @@
-import React from 'react';
-import Categories from '../Components/Categories';
-import MenuItems from '../Components/MenuItems';
-import Tittle from '../Components/Tittle';
-import portfolios from '../Components/allportfolios';
-import { useState, useEffect } from 'react';
+import React from "react";
+import Categories from "../Components/Categories";
+import MenuItems from "../Components/MenuItems";
+import Tittle from "../Components/Tittle";
+import portfolios from "../Components/allportfolios";
+import { useState, useEffect } from "react";
 
-const allCategories = ['All', ...new Set(portfolios.map(item => item.category))];
+const allCategories = [
+  "All",
+  "Vanilla Js",
+  "React Js",
+  "PHP",
+  "Node Js",
+  "Mongo Db",
+  "Postgress",
+];
 
 function PortfoliosPage() {
-    const [categories, setCategories] = useState([]);
-    const [menuItems, setMenuItems] = useState(portfolios);
-    
+  const [categories, setCategories] = useState([]);
+  const [menuItems, setMenuItems] = useState([]);
 
-    const filter = (category) =>{
-        if(category === 'All'){
-            setMenuItems(portfolios)
-            return;
-        }
-        const filteredData  = portfolios.filter((item)=>{
-            return item.category === category;
-        })
-        
-        setMenuItems(filteredData);
-    }
-    useEffect(() => {
-        setCategories(allCategories)
-    }, [])
+  const filter = (name) => {
+    const new_portfolios = portfolios.filter((portfolio) =>
+      portfolio.category.includes(name)
+    );
+    if (name === "All") setMenuItems(portfolios);
+    else setMenuItems(new_portfolios);
+  };
 
-    return (
-        <div className="PortfolioPage">
-            <div className="title">
-                <Tittle title={'Portfolios'} span={'portfolios'} />
-            </div>
-            <div className="portfolios-data">
-                <Categories filter={filter} categories={categories} />
-                <MenuItems menuItem={menuItems} />
-            </div>
-        </div>
-    )
+  useEffect(() => {
+    setMenuItems(portfolios);
+    setCategories(allCategories);
+  }, []);
+
+  return (
+    <div className="PortfolioPage">
+      <div className="title">
+        <Tittle title={"Portfolios"} span={"portfolios"} />
+      </div>
+      <div className="portfolios-data">
+        <Categories filter={filter} categories={categories} />
+        <MenuItems menuItem={menuItems} />
+      </div>
+    </div>
+  );
 }
 
 export default PortfoliosPage;
