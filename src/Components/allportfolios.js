@@ -6,6 +6,7 @@ import port5 from "../img/portImages/agencySite.png";
 import port6 from "../img/portImages/portfolio.png";
 
 const portfolios = [
+<<<<<<< HEAD
   {
     id: 6,
     category: ["React Js"],
@@ -77,5 +78,69 @@ const portfolios = [
     title: "Realtime Chat App",
   },
 ];
+=======
+    {
+        id: 6,
+        category: 'React Js',
+        link1: 'https://github.com/marville001/portfolio',
+        link2: 'https://martinmwangi.netlify.app/',
+        icon1: 'G',
+        icon2: 'W',
+        image: port6,
+        title: 'My Portfolio'
+    },
+    {
+        id: 1,
+        category: 'React Js',
+        link1: 'https://github.com/marville001/covid-19-tracker',
+        link2: 'https://tracker-covid19-001.netlify.app/',
+        icon1: 'G',
+        icon2: 'W',
+        image: port1,
+        title: 'Covid 19 Tracker'
+    },
+    {
+        id: 2,
+        category: 'React Js',
+        link1: 'www.github.com',
+        link2: 'https://www.marville001.ml/',
+        icon1: 'G',
+        icon2: 'W',
+        image: port2,
+        title: 'Face Detector App'
+    },
+    {
+        id: 3,
+        category: 'React Js',
+        link1: 'https://github.com/marville001/react-ashop',
+        link2: 'https://a-shop.netlify.app/',
+        icon1: 'G',
+        icon2: 'W',
+        image: port3,
+        title: 'Ecommerce Website'
+    },
+    {
+        id: 4,
+        category: 'Vanilla Js',
+        link1: 'https://github.com/marville001/Budget-App',
+        link2: 'https://budgetapp001.netlify.app/',
+        icon1: 'G',
+        icon2: 'W',
+        image: port4,
+        title: 'Simple BudgetApp'
+    },
+    {
+        id: 5,
+        category: 'Vanilla Js',
+        link1: 'https://github.com/marville001/Creative-Agency',
+        link2: 'https://agency001.netlify.app/',
+        icon1: 'G',
+        icon2: 'W',
+        image: port5,
+        title: 'Agency Responsive Website'
+    },
+    
+]
+>>>>>>> 57f62accb1a1c4cc396bfaabfac236e59df39b7b
 
 export default portfolios;
