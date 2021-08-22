@@ -3,11 +3,12 @@
 @import './styles/contact';
 @import './styles/layout';
 @import './styles/typography';
-@import './styles/navbar';
+// @import './styles/navbar';
 @import './styles/skill';
 @import './styles/portfolios';
 @import './styles/services';
 @import './styles/title';
+@import './styles/header';
 
 *{
     padding: 0;
@@ -54,4 +55,10 @@ span{
     h3{
         font-size: 70%;
     }
+}
+
+.container{
+    width: 95%;
+    max-width: 1200px;
+    margin: 0px auto;
 }
