@@ -1,6 +1,4 @@
 import "./App.scss";
-import NavBar from "./Components/NavBar";
-import HomePage from "./Pages/HomePage";
 import { Switch, Route } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage";
 import PortfliosPage from "./Pages/PortfoliosPage";
@@ -8,6 +6,7 @@ import BlogsPage from "./Pages/BlogsPage";
 import ContactPage from "./Pages/ContactPage";
 import { useState } from "react";
 import Header from "./Components/Header";
+import Home from "./Pages/Home";
 
 function App() {
   
@@ -15,11 +14,11 @@ function App() {
   return (
     <div className="App">
         <Header/>
-      <div className="main-content">
-        <div className="content">
+      <div className="main-content" style={{padding: "50px 0px"}}>
+        <div className="container">
           <Switch>
             <Route path="/" exact>
-              <HomePage />
+              <Home />
             </Route>
             <Route path="/about" exact>
               <AboutPage />
