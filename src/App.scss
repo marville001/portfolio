@@ -2,9 +2,6 @@
 @import './styles/about';
 @import './styles/blogs';
 @import './styles/contact';
-// @import './styles/layout';
-@import './styles/typography';
-// @import './styles/navbar';
 @import './styles/skill';
 @import './styles/portfolios';
 @import './styles/services';
@@ -62,4 +59,8 @@ span{
     width: 95%;
     max-width: 1200px;
     margin: 0px auto;
+}
+
+a{
+    user-select: none;
 }

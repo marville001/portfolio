@@ -14,8 +14,7 @@ function App() {
   return (
     <div className="App">
         <Header/>
-      <div className="main-content" style={{padding: "50px 0px"}}>
-        <div className="container">
+      <div className="main-content">
           <Switch>
             <Route path="/" exact>
               <Home />
@@ -33,7 +32,6 @@ function App() {
               <ContactPage />
             </Route>
           </Switch>
-        </div>
       </div>
     </div>
   );

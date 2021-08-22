@@ -8,6 +8,8 @@
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 50px 0px;
     @include tablet{
         grid-template-columns: 1fr;
     }
@@ -27,6 +29,66 @@
         p{
             color: rgba(0,0,0,.7);
         }
+
+        .social-icons{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1.5rem 0;
+            .icon-holder{
+                margin-right: 1rem;
+                .icon{
+                   font-size: 2.5rem;
+                   color: #a4acc4;
+                   transition: all .4s ease-in-out;
+                }
+                .fv{
+                    transform: scale(1);
+                }
+                .fb:hover{
+                    color: blue;
+                }
+                .tw:hover{
+                    color: blue;
+                }
+                .gh:hover{
+                    color: rgba(212, 45, 212, 0.788);
+                }
+                .yt:hover{
+                    color: red;
+                }
+            }
+        }
+        .languages{
+            display: flex;
+            flex-wrap: wrap;
+
+            .language{
+                background-color: #383737;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+        .hero-btns{
+            margin-top: 20px;
+            display: grid !important;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr !important;
+            a{
+                background-color: red;
+                text-align: center;
+                padding: 10px 0px;
+                border-radius: 5px;
+                cursor: pointer;
+                color: #fff;
+            }
+            .download-resume-btn{
+                background-color: #000;
+            }
+        }
     }
 
     .image{
@@ -35,5 +97,21 @@
             height: 400px;
             border-radius: 10px;
         }
+        @include tablet{
+            display: none;
+        }
+    }
+}
+
+.services{
+    background-color: #000;
+    min-height: 300px;
+
+    h2{
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-size: 25px;
+        font-weight: 900;
     }
 }
