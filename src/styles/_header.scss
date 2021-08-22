@@ -1,7 +1,7 @@
 @mixin tablet {
-  // @media screen and (max-width: 900px) {
-  //     @include @content;
-  // }
+  @media (max-width: 900px) {
+    @content;
+  }
 }
 
 .header {
@@ -24,16 +24,53 @@ a.logo span {
 
 nav {
   margin-left: 30px;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    background-color: #3858cc;
+    top: 0px;
+    left: -40px;
+    bottom: 0px;
+    z-index: 454;
+    width: 400px;
+    align-items: center;
+    padding-top: 40px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s linear;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+nav.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+nav a.home{
+  display: none;
+  @include tablet() {
+    display: inline;
+  }
 }
 
 nav a {
   margin: 10px;
   color: #7a7a7a;
   font-weight: 400;
+  @include tablet() {
+    margin: 30px;
+    color: #fff;
+    font-size: 20px;
+  }
 }
 
-nav .active{
-    color: crimson;
+nav .active {
+  color: crimson;
+  @include tablet() {
+    color: #fff;
+  }
 }
 .right-nav {
   margin-left: auto;
@@ -48,7 +85,7 @@ nav .active{
     font-weight: 700;
     height: 40px;
     width: 150px;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     font-size: 15px;
     border-radius: 5px;
     text-transform: uppercase;
@@ -77,39 +114,9 @@ nav .active{
         margin-bottom: 0.5rem;
       }
     }
-    @media screen and (max-width: 900px) {
+    @include tablet {
       display: flex;
     }
   }
 }
 
-@media screen and (max-width: 900px) {
-  .header-content {
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    height: 100vh;
-    background-color: #3858cc;
-    top: 0px;
-    left: -40px;
-    bottom: 0px;
-    z-index: 454;
-    width: 400px;
-    align-items: center;
-    padding-top: 40px;
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s linear;
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  nav.open {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  nav a {
-    margin: 30px;
-    color: #fff;
-  }
-}

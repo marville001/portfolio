@@ -14,6 +14,7 @@ const Header = () => {
           <span>Martin</span> Mwangi
         </Link>
         <nav className={navToggle ?"open":""}>
+          <NavLink activeClassName="active" className="home" onClick={navClick} to="/">Home</NavLink>
           <NavLink activeClassName="active"  onClick={navClick} to="/portfolios">Portfolio</NavLink>
           <NavLink activeClassName="active" onClick={navClick} to="/resume">Resume</NavLink>
           <NavLink activeClassName="active" onClick={navClick} to="/blogs">Blogs</NavLink>
