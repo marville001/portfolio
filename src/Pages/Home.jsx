@@ -79,8 +79,8 @@ const Home = () => {
             <div className="language">MongoDB</div>
           </div>
           <div className="hero-btns">
-            <a className="download-resume-btn">Download Resume</a>
-            <a className="hire-me-btn">Hire Me</a>
+            <Link className="download-resume-btn">Download Resume</Link>
+            <Link className="hire-me-btn">Hire Me</Link>
           </div>
         </div>
         <div className="image">

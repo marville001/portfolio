@@ -4,7 +4,6 @@ import AboutPage from "./Pages/AboutPage";
 import PortfliosPage from "./Pages/PortfoliosPage";
 import BlogsPage from "./Pages/BlogsPage";
 import ContactPage from "./Pages/ContactPage";
-import { useState } from "react";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 
