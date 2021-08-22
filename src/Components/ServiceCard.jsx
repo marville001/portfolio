@@ -1,19 +1,19 @@
 import React from 'react';
 
-function ServicesSection({image, title, text}) {
+function ServiceCard({image, title, text}) {
     return (
-        <div className="ServicesSection">
+        <div className="service-card">
             <div className="service">
-                <div className="service-content">
+                <div className="service-head">
                     <img src={image} alt=""/>
                     <h5 className="s-title">{title}</h5>
-                    <p className="s-text">
+                </div>
+                <p className="s-text">
                         {text}
                     </p>
-                </div>
             </div>
         </div>
     )
 }
 
-export default ServicesSection;
+export default ServiceCard;

@@ -2,7 +2,7 @@ import React from 'react'
 import Tittle from '../Components/Tittle'
 import ImageSection from '../Components/ImageSection';
 import SkillsSection from '../Components/SkillsSection';
-import ServicesSection from '../Components/ServicesSection';
+// import ServicesSection from '../Components/ServiceCard';
 import design from '../img/design.svg';
 import intelligence from '../img/intelligence.svg';
 import gamedev from '../img/game-dev.svg';
@@ -26,7 +26,7 @@ function AboutPage() {
 
             <Tittle title={'Services'} span={'Services'} />
             <div className="servives-container">
-                <ServicesSection image={design} title={'Web design'} 
+                {/* <ServicesSection image={design} title={'Web design'} 
                 text={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
                 />
                 <ServicesSection image={intelligence} title={'Artificial Intelligence'} 
@@ -34,7 +34,7 @@ function AboutPage() {
                 />
                 <ServicesSection image={gamedev} title={'Game Development'} 
                 text={'Lorem ipsum dolor sit amet consectetur adipisicing elit.'}
-                />
+                /> */}
             </div>
 
         </div>
