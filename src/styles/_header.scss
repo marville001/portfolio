@@ -31,7 +31,7 @@ a.logo {
   }
 }
 a.logo span {
-  color: crimson;
+  color: var(--accentColor);
 }
 
 nav {
@@ -41,7 +41,7 @@ nav {
     flex-direction: column;
     position: fixed;
     height: 100vh;
-    background-color: #3858cc;
+    background-color: var(--darkColor);
     top: 0px;
     left: -40px;
     bottom: 0px;
@@ -61,7 +61,7 @@ nav {
   .close-btn {
     display: none;
     width: 100%;
-    background-color: red;
+    background-color: var(--accentColor);
 
     @include tablet() {
       display: block;
@@ -71,7 +71,7 @@ nav {
         position: absolute;
         right: 10%;
         font-size: 30px;
-        color: #fff;
+        color: var(--accentColor);
         font-weight: 800;
         cursor: pointer;
       }
@@ -92,7 +92,7 @@ nav a.home {
 
 nav a {
   margin: 10px;
-  color: #CCD6F6;
+  color: var(--lightColor);
   font-weight: 400;
   @include tablet() {
     margin: 30px;
@@ -102,10 +102,7 @@ nav a {
 }
 
 nav .active {
-  color: crimson;
-  @include tablet() {
-    color: #fff;
-  }
+  color: var(--accentColor);
 }
 .right-nav {
   margin-left: auto;
@@ -113,10 +110,10 @@ nav .active {
   align-items: center;
 
   .challenges-btn {
-    background-color: crimson;
-    border: none;
+    background-color: transparent;
+    border: 1px solid var(--accentColor);
     outline: none;
-    color: #fff;
+    color: var(--accentColor);
     font-weight: 700;
     height: 40px;
     width: 150px;
@@ -133,7 +130,7 @@ nav .active {
   }
 
   .nav-btn {
-    background-color: #fff;
+    // background-color: #fff;
     z-index: 10;
     width: 2.5rem;
     @include phone {
@@ -151,7 +148,7 @@ nav .active {
       height: 0.3rem;
       width: 100%;
 
-      background-color: #3858cc;
+      background-color: var(--accentColor);
       pointer-events: none;
       border-radius: 20px;
       &:not(:last-child) {

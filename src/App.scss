@@ -9,6 +9,7 @@
 :root{
     --lightColor : #CCD6F6;
     --darkColor : #0A192F;
+    --accentColor : #64FFDA;
 
 }
 *{
@@ -34,7 +35,7 @@ body{
     overflow-x: hidden;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 1.2rem;
-    background-color: #0A192F;
+    background-color: var(--darkColor);
 }
 span{
     color: #037FFF;

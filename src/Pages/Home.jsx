@@ -21,7 +21,7 @@ const Home = () => {
           <h1>
             Hi, <span>I'm <span className="name">Martin Mwangi</span></span>
           </h1>
-          <h5>A full stack web developer</h5>
+          <h5>I build things for the web.</h5>
           <p>
             Am a fullstack javascript developer with a degree in computer
             science. I graduated at Dedan Kimathi University of Technology with
