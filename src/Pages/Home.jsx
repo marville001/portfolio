@@ -1,14 +1,14 @@
 import React from "react";
 // import me from "../img/me.png";
-import {
-  faGithub,
-  faFacebook,
-  faTwitter,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faGithub,
+//   faFacebook,
+//   faTwitter,
+//   faLinkedinIn,
+// } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import fiverr from "../img/fiverr.png";
+// import fiverr from "../img/fiverr.png";
 import ServiceCard from "../Components/ServiceCard";
 import design from "../img/design.svg";
 import intelligence from "../img/intelligence.svg";
@@ -26,11 +26,10 @@ const Home = () => {
           </h1>
           <h5 className="subtitle">I build things for the web.</h5>
           <p>
-            Am a fullstack javascript developer specializing in building (and occasionally designing) exceptional digital experiences. with a degree in computer
-            science. I graduated at Dedan Kimathi University of Technology with
-            a 1st Class honor.
+            Am a fullstack javascript developer specializing in building (and occasionally designing) exceptional digital experiences. I graduated at Dedan Kimathi University of Technology with
+            a 1st Class honor in Computer Science.
           </p>
-          <div className="social-icons">
+          {/* <div className="social-icons">
             <Link
               to={{ pathname: "https://www.facebook.com/marville001" }}
               target="_blank"
@@ -67,8 +66,8 @@ const Home = () => {
             >
               <img className="fv" src={fiverr} alt="Fiverr" />
             </Link>
-          </div>
-          <div className="languages">
+          </div> */}
+          {/* <div className="languages">
             <div className="language">HTML5</div>
             <div className="language">CSS3</div>
             <div className="language">Vanilla.Js</div>
@@ -80,10 +79,10 @@ const Home = () => {
             <div className="language">MySql</div>
             <div className="language">Postgress</div>
             <div className="language">MongoDB</div>
-          </div>
+          </div> */}
           <div className="hero-btns">
             <Link className="download-resume-btn">Download Resume</Link>
-            <Link className="hire-me-btn">Hire Me</Link>
+            {/* <Link className="hire-me-btn">Hire Me</Link> */}
           </div>
         </div>
         {/* <div className="image">
