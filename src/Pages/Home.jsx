@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../img/me.png";
+// import me from "../img/me.png";
 import {
   faGithub,
   faFacebook,
