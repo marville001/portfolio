@@ -30,11 +30,14 @@
       }
     }
     .name{
-      font-size: clamp(40px, 8vw, 80px);
+      font-size: var(--largeSize);
       color: var(--accentColor);
       
       @include tablet {
-        font-size: clamp(30px, 6vw, 60px);
+        font-size: var(--largeSizeTablet);
+      }
+      @include phone {
+        font-size: var(--largeSizePhone);
       }
     }
     .subtitle{
