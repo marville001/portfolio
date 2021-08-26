@@ -18,12 +18,15 @@ const Home = () => {
     <div>
       <div className="home-hero container">
         <div className="details">
-          <h1>
-            Hi, <span>I'm <span className="name">Martin Mwangi</span></span>
+        <h2 className="greetings">
+            Hi, my name is
+          </h2>
+          <h1 className="name">
+            Martin Mwangi
           </h1>
-          <h5>I build things for the web.</h5>
+          <h5 className="subtitle">I build things for the web.</h5>
           <p>
-            Am a fullstack javascript developer with a degree in computer
+            Am a fullstack javascript developer specializing in building (and occasionally designing) exceptional digital experiences. with a degree in computer
             science. I graduated at Dedan Kimathi University of Technology with
             a 1st Class honor.
           </p>
@@ -83,9 +86,9 @@ const Home = () => {
             <Link className="hire-me-btn">Hire Me</Link>
           </div>
         </div>
-        <div className="image">
+        {/* <div className="image">
           <img src={me} alt="Martin Mwangi" />
-        </div>
+        </div> */}
       </div>
       <div className="services">
         <div className="container services-content">
