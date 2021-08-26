@@ -23,7 +23,7 @@
 }
 
 a.logo {
-  color: black;
+  color: #fff;
   font-weight: 900;
   font-size: 22px;
   @include phone {
@@ -92,7 +92,7 @@ nav a.home {
 
 nav a {
   margin: 10px;
-  color: #7a7a7a;
+  color: #CCD6F6;
   font-weight: 400;
   @include tablet() {
     margin: 30px;

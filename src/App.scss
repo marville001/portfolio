@@ -6,7 +6,11 @@
 @import './styles/portfolios';
 @import './styles/title';
 @import './styles/header';
+:root{
+    --lightColor : #CCD6F6;
+    --darkColor : #0A192F;
 
+}
 *{
     padding: 0;
     margin: 0;
