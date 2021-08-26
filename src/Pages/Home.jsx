@@ -19,7 +19,7 @@ const Home = () => {
       <div className="home-hero container">
         <div className="details">
           <h1>
-            Hi, I'm <span>Martin Mwangi</span>
+            Hi, <span>I'm <span className="name">Martin Mwangi</span></span>
           </h1>
           <h5>A full stack web developer</h5>
           <p>

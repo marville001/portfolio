@@ -22,7 +22,11 @@
     h1 {
       color: #000;
       margin: 10px 0px;
-      span {
+      span{
+
+        font-size: 24px;
+      }
+      span.name {
         color: crimson;
       }
       @include phone {
@@ -180,6 +184,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     .service-card {
       .service {
+        min-height: 150px;
         background-color: #191d2b;
         padding: 1rem;
         transition: all .3s ease;
@@ -197,10 +202,11 @@
             margin-left: 10px;
             font-size: 1.2rem;
             font-weight: 500;
+            font-size: 18px;
           }
         }
         .s-text {
-          font-size: 14px;
+          font-size: 12px;
           line-height: 20px;
         }
         &:hover{
