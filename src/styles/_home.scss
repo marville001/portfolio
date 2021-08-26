@@ -8,6 +8,12 @@
     @content;
   }
 }
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
 .home-hero {
   display: grid;
   gap: 30px;
@@ -19,48 +25,44 @@
   }
 
   .details {
-    .greetings{
-      font-size: 20px;
-      color: var(--lightColor);
-      
-      @include tablet {
-        // font-size: clamp(30px, 6vw, 60px);
-      }
+    min-height: 70vh;
+    width: 80%;
+    margin: auto;
+    @include tablet{
+      min-height: 60vh;
+      width: 90%;
+      margin: 0px auto;
     }
-    .name{
-      font-size: var(--largeSize);
+    .greetings {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: normal;
+      color: var(--lightColor);
+    }
+
+    .name {
+      font-size: 60px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding-left: 0px;
       color: var(--accentColor);
-      
+
       @include tablet {
         font-size: var(--largeSizeTablet);
       }
       @include phone {
-        font-size: var(--largeSizePhone);
+        font-size: 30px;
+        margin-top: 10px;
       }
     }
-    .subtitle{
-      font-size: clamp(30px, 6vw, 60px);
+
+    .subtitle {
+      font-size: 40px;
       color: var(--darkGray);
 
-      @include tablet {
-        font-size: clamp(20px, 5vw, 50px);
+      @include phone {
+        font-size: var(--largeSizePhone);
       }
-    }
-    h1 {
-      color: #000;
-      margin: 10px 0px;
-      span{
-
-        // font-size: 24px;
-      }
-      span.name {
-        color: crimson;
-      }
-      // @include phone {
-      //   font-size: 22px;
-      //   text-align: center;
-      // }
-
     }
     h5 {
       color: rgba(0, 0, 0, 0.7);
@@ -70,91 +72,30 @@
         // text-align: center;
       }
     }
-    p {
-      color: var(--lightColor);
+
+    .description {
+      color: #818181;
       max-width: 700px;
-      line-height: 25px;
-      font-size: 14px;
-      @include phone {
-        text-align: center;
-        width: 80%;
-        margin: auto;
-      }
+      line-height: 30px;
+      font-size: 17px;
+      font-weight: normal;
     }
-
-    .social-icons {
+    .download-resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      border: 2px solid var(--accentColor);
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+      height: 50px;
+      width: 200px;
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: flex-start;
-      padding: 1.5rem 0;
-      @include phone {
-        justify-content: center;
-      }
-      .icon-holder {
-        margin-right: 1rem;
-        .icon {
-          font-size: 2.5rem;
-          color: #a4acc4;
-          transition: all 0.4s ease-in-out;
-        }
-        .fv {
-          transform: scale(1);
-        }
-        .fb:hover {
-          color: blue;
-        }
-        .tw:hover {
-          color: blue;
-        }
-        .gh:hover {
-          color: rgba(212, 45, 212, 0.788);
-        }
-        .yt:hover {
-          color: red;
-        }
-      }
-    }
-    .languages {
-      display: flex;
-      flex-wrap: wrap;
-
-      @include phone {
-        justify-content: center;
-      }
-
-      .language {
-        background-color: #383737;
-        margin-right: 20px;
-        margin-bottom: 10px;
-        border-radius: 10px;
-        padding: 8px 15px;
-        font-size: 14px;
-      }
-    }
-    .hero-btns {
-      margin-top: 40px;
-      // display: grid;
-      gap: 10px;
-      // grid-template-columns: 1fr 1fr;
-      @include phone {
-        margin: 20px auto;
-      }
-      a {
-        border: 2px solid  var(--accentColor);
-        text-align: center;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        color: #fff;
-        height: 40px;
-        margin: 40px 0px;
-        @include phone {
-          font-size: 16px;
-        }
-      }
+      font-size: 16px;
+      letter-spacing: 1px;
     }
   }
-
   .image {
     img {
       width: 100%;
@@ -182,7 +123,7 @@
     margin: 50px 0px;
     padding-bottom: 10px;
   }
-  h2::before{
+  h2::before {
     content: "";
     height: 0.3rem;
     width: 250px;
@@ -192,7 +133,7 @@
     border-radius: 5px;
     background-color: rgb(219, 148, 162);
   }
-  h2::after{
+  h2::after {
     content: "";
     border-radius: 5px;
     height: 0.3rem;
@@ -212,7 +153,7 @@
         min-height: 150px;
         background-color: #191d2b;
         padding: 1rem;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         border-radius: 5px;
         cursor: grab;
         .service-head {
@@ -234,11 +175,10 @@
           font-size: 12px;
           line-height: 20px;
         }
-        &:hover{
+        &:hover {
           background-color: #323644;
         }
       }
-      
     }
   }
 }
