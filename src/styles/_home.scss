@@ -168,6 +168,7 @@ ABOUT SECTION START
       height: 300px;
       position: relative;
       margin: 0px 0px 0px 30px;
+      
       @include tablet {
         margin: 20px 0px 30px 0px;
       }
@@ -180,11 +181,16 @@ ABOUT SECTION START
         left: 0px;
         right: 0px;
         z-index: 3;
-        background-color: rgba(100, 255, 218, .6);
+        background-color: rgba(38, 43, 41, 0.493);
+        // opacity: .6;
+        // mix-blend-mode: screen;
       }
       &:hover{
         &::before{
           background-color: transparent;
+        }
+        img{
+          transform: scale(1.1);
         }
       }
 
