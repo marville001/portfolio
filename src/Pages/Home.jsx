@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ServiceCard from "../Components/ServiceCard";
 import design from "../img/design.svg";
 import intelligence from "../img/intelligence.svg";
 import gamedev from "../img/game-dev.svg";
 import HeroSection from "../Components/HomeComponents/HeroSection";
+import AboutSection from "../Components/HomeComponents/AboutSection";
 const Home = () => {
   return (
     <div>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <AboutSection />
 
       <div className="services">
         <div className="container services-content">

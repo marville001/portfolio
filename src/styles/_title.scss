@@ -1,36 +1,39 @@
-.Title{
-    text-transform: uppercase;
+@mixin phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+.title{
     font-size: 2rem;
     color: #000;
     position: relative;
     padding-bottom: 1rem;
     letter-spacing: 3px;
-    &::before{
-        content: "";
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        background-color: #0381ff38;
-        width: 6rem;
-        height: .4rem;
-        border-radius: 50px;
-       
+    
+    h3{
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        hr{
+            width: 200px;
+            height: 1px;
+            border-color: rgba(238, 238, 238, .3);
+@include phone(){
+    width: 100px;
+}
+        }
     }
-    &::after{
-        content: "";
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        background-color: #037FFF;
-        width: 3rem;
-        height: .4rem;
-        border-radius: 50px;
+
+    .index{
+        color: var(--accentColor);
+        font-weight: normal;
+        font-size: 20px;
+        font-family:  sans-serif;
     }
-    span{
-        position: absolute;
-        top: 15%;
-        left: 0;
-        font-size: 5rem;
-        opacity: 0.07;
+
+    .title-c{
+        margin: 0px 10px;
+        color: #fff;
     }
 }
