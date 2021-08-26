@@ -8,7 +8,7 @@ import AboutSection from "../Components/HomeComponents/AboutSection";
 const Home = () => {
   return (
     <div>
-      {/* <HeroSection /> */}
+      <HeroSection />
       <AboutSection />
 
       <div className="services">

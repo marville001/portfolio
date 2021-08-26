@@ -80,7 +80,7 @@
 
     .description {
       color: #818181;
-      max-width: 700px;
+      max-width: 800px;
       line-height: 30px;
       font-size: 17px;
       font-weight: normal;
@@ -112,16 +112,24 @@ ABOUT SECTION START
   min-height: 60vh;
   width: 80%;
   margin: auto;
-  padding: 20px 0px;
+  padding: 20px 0px 50px 0px;
   @include tablet {
     min-height: 60vh;
     width: 90%;
     margin: 0px auto;
   }
 
-  .about-content{
-    .about-description{
-      p{
+  .about-content {
+    display: flex;
+
+    align-items: center;
+    @include tablet {
+      flex-direction: column;
+      margin-top: 20px;
+      align-items: flex-start;
+    }
+    .about-description {
+      p {
         font-size: 15px;
         text-align: justify;
         margin: 10px 0px 15px;
@@ -129,19 +137,19 @@ ABOUT SECTION START
         max-width: 600px;
       }
 
-      .languages{
+      .languages {
         display: grid;
         grid-template-columns: 200px 200px;
 
-        h3{
+        h3 {
           font-size: 15px;
           font-weight: normal;
           margin-bottom: 10px;
           display: flex;
           align-items: center;
-          letter-spacing: .9px;
+          letter-spacing: 0.9px;
 
-          .icon{
+          .icon {
             width: 6px;
             height: 6px;
             display: inline-block;
@@ -151,6 +159,46 @@ ABOUT SECTION START
             transform: rotate(-45deg);
             margin-right: 10px;
           }
+        }
+      }
+    }
+
+    .about-image {
+      width: 340px;
+      height: 300px;
+      position: relative;
+      margin: 0px 0px 0px 30px;
+      @include tablet {
+        margin: 20px 0px 30px 0px;
+      }
+      &::before{
+        content: '';
+        transition: all 0.3s ease;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 3;
+        background-color: rgba(100, 255, 218, .6);
+      }
+      &:hover{
+        &::before{
+          background-color: transparent;
+        }
+      }
+
+      img {
+        width: 340px;
+        height: 300px;
+        // opacity: 0.4;
+        transition: all 0.3s ease;
+        position: relative;
+
+        
+
+        &:hover {
+          opacity: 1;
         }
       }
     }

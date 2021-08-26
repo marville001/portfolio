@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Tittle from "../Tittle";
+import me from "../../img/portfolio-image-4.jpg"
 
 const AboutSection = () => {
   return (
@@ -23,7 +24,7 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="about-image">
-            <img src="" alt="" />
+            <img src={me} alt="Martin Mwangi Wanjiku" />
           </div>
         </div>
       </div>
