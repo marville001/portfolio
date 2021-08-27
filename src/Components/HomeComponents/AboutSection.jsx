@@ -1,7 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import Tittle from "../Tittle";
-// import me from "../../img/portfolio-image-4.jpg"
 import me from "../../img/me.png"
 
 const AboutSection = () => {
