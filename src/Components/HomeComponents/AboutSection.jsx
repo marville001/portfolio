@@ -1,6 +1,6 @@
 import React from "react";
 import Tittle from "../Tittle";
-import me from "../../img/me.png"
+import me from "../../img/Martin.png"
 
 const AboutSection = () => {
   return (
