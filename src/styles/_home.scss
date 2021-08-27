@@ -129,6 +129,9 @@ ABOUT SECTION START
       align-items: flex-start;
     }
     .about-description {
+      @include phone{
+        max-width: 90%;
+      }
       p {
         font-size: 15px;
         text-align: justify;
@@ -137,7 +140,6 @@ ABOUT SECTION START
         max-width: 600px;
 
         @include phone{
-          max-width: 90%;
           font-size: 13px;
         }
       }
