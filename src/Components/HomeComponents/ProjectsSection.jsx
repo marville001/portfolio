@@ -1,6 +1,7 @@
 import React from "react";
 import Tittle from "../Tittle";
 import ServiceCard from "../ServiceCard";
+import ProjectCard from "../ProjectCard";
 
 const services = [
   {
@@ -28,20 +29,19 @@ const services = [
   },
 ];
 
-const ServicesSection = () => {
+const ProjectsSection = () => {
   return (
     <div className="container">
-      <div className="services">
-        <Tittle title="Services" index="02" />
-
-        <div className="services-cards">
-          {services.map((service) => (
-            <ServiceCard  service={service}/>
-          ))}
+      <div className="projects">
+        <Tittle title="My Projects" index="03" />
+        <div className="projects-cards">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
       </div>
     </div>
   );
 };
 
-export default ServicesSection;
+export default ProjectsSection;
