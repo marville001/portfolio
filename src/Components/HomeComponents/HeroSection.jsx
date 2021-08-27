@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import resume from '../../assets/Martin Mwangi Wanjiku  CV.pdf'
 
 const HeroSection = () => {
     return (
@@ -14,7 +15,7 @@ const HeroSection = () => {
             at Dedan Kimathi University of Technology with a 1st Class honor in
             Computer Science.
           </p>
-          <Link className="download-resume-btn">Download Resume</Link>
+          <a target="_blank" href={resume} download="resume.pdf" className="download-resume-btn">Download Resume</a>
         </div>
       </div>
     )
