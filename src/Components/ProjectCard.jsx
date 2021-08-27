@@ -20,7 +20,7 @@ const ProjectCard = () => {
                 </div>
             </div>
             <div className="project-image">
-                <a href="#">
+                <a href="#sss">
                     <img src={project1} alt="Project Name" />
                 </a>
             </div>
