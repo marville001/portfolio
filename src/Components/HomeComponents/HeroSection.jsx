@@ -15,7 +15,7 @@ const HeroSection = () => {
             at Dedan Kimathi University of Technology with a 1st Class honor in
             Computer Science.
           </p>
-          <a target="_blank" href={resume} download="resume.pdf" className="download-resume-btn">Download Resume</a>
+          <a target="_blank" rel="noreferrer" href={resume} download="resume.pdf" className="download-resume-btn">Download Resume</a>
         </div>
       </div>
     )
