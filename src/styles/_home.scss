@@ -241,6 +241,41 @@ Services SECTION START
     width: 90%;
     margin: 0px auto;
   }
+
+  .services-cards{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    .service-card{
+      background-color: var(--darkLightColor);
+      padding: 20px;
+      position: relative;
+
+
+      .service-icon{
+          width: 60px;
+          height: 60px;
+          position: absolute;
+          right: 10px;
+      }
+      h2{
+        font-size: 20px;
+        color: #fff;
+        margin: 10px 0px 30px;
+      }
+      p{
+        margin: 20px 0px;
+        font-size: 14px;
+        text-align: justify;
+        line-height: 20px;
+      }
+    }
+  }
 }
 /*
 =====================

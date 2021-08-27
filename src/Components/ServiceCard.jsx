@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
-function ServiceCard({image, title, text}) {
-    return (
-        <div className="service-card">
-            <div className="service">
-                <div className="service-head">
-                    <img src={image} alt=""/>
-                    <h5 className="s-title">{title}</h5>
-                </div>
-                <p className="s-text">
-                        {text}
-                    </p>
-            </div>
-        </div>
-    )
+function ServiceCard({ service: { icon, title, description } }) {
+  return (
+    <div className="service-card">
+      <img className="service-icon" src={icon} alt={title} />
+      <h2 className="s-title">{title}</h2>
+      <p className="s-text">{description}</p>
+    </div>
+  );
 }
 
 export default ServiceCard;
