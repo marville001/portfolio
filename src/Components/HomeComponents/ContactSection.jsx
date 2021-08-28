@@ -28,13 +28,13 @@ const ContactSection = () => {
               <input type="email" id="email" />
             </div>
             <div className="input-container">
-              <label htmlFor="text">Subject</label>
+              <label htmlFor="subject">Subject</label>
               <input type="text" id="subject" />
             </div>
           </div>
           <div className="input-container">
             <label htmlFor="message">Message</label>
-            <textarea name="message" id="" cols="30" rows="5"></textarea>
+            <textarea id="message" cols="30" rows="5"></textarea>
           </div>
           <button className="send-btn">Send Message</button>
         </div>
