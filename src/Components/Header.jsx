@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [navToggle, setNavToggle] = useState(false);
 
@@ -14,12 +14,12 @@ const Header = () => {
         </Link>
         <nav className={navToggle ?"open":""}>
           <div className="close-btn"><span onClick={navClick}>X</span></div>
-          <NavLink activeClassName="active" className="home" onClick={navClick} to="/">Home</NavLink>
-          <NavLink activeClassName="active"  onClick={navClick} to="#portfolios">Portfolio</NavLink>
-          <NavLink activeClassName="active" onClick={navClick} to="#resume">Resume</NavLink>
-          <NavLink activeClassName="active" onClick={navClick} to="#blogs">Blogs</NavLink>
-          <NavLink activeClassName="active" onClick={navClick} to="#about">About</NavLink>
-          <NavLink activeClassName="active" onClick={navClick} to="#contact">Contact</NavLink>
+          <a className="home" onClick={navClick} href="/">Home</a>
+          <a  onClick={navClick} href="#about">About Me</a>
+          <a onClick={navClick} href="#services">Services</a>
+          <a onClick={navClick} href="#portfolio">Portfolio</a>
+          <a onClick={navClick} href="#contact">Contact</a>
+          <a onClick={navClick} href="#about">Blogs</a>
         </nav>
         <div className="right-nav">
           <button className="challenges-btn">HIRE ME</button>

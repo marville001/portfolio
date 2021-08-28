@@ -30,8 +30,8 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <div className="container">
-      <div className="services">
+    <div className="container" id="services">
+      <div className="services" >
         <Tittle title="Services" index="02" />
 
         <div className="services-cards">

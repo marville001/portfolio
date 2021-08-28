@@ -4,7 +4,7 @@ import me from "../../img/Martin.png"
 
 const AboutSection = () => {
   return (
-    <div className="container">
+    <div className="container" id="about">
       <div className="about">
         <Tittle title="About me" index="01" />
         <div className="about-content">
