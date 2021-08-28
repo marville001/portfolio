@@ -6,6 +6,7 @@ import BlogsPage from "./Pages/BlogsPage";
 import ContactPage from "./Pages/ContactPage";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
+import Footer from "./Components/Footer";
 
 function App() {
   
@@ -32,6 +33,7 @@ function App() {
             </Route>
           </Switch>
       </div>
+      <Footer />
     </div>
   );
 }

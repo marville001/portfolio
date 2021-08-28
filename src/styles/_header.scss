@@ -10,8 +10,13 @@
 }
 
 .header {
+  // position: fixed;
+  z-index: 2323;
+  left: 0;
+  right: 0;
 }
 .header-content {
+  margin: auto;
   height: 120px;
   display: flex;
   justify-content: flex-start;

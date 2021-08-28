@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Martin Mwangi Wanjiku, marville001 Is a computer scientist who studied in dedan kimathi university. A full stack web developer."
-    />
-    <title>Portfolio | Martin Mwangi</title>
-  </head>
-
-  <body id="body">
-
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Mwangi</title>
+</head>
+<body>
     <div id="root"></div>
-
     <script>
-      const element = document.querySelector(".main-content");
-      document.addEventListener('scroll',(event)=>{
-        const scroll = document.scrollingElement.scrollTop
+        
+        document.addEventListener('scroll', ()=>{
+            const header = document.querySelector(".header")
+            const headerContent = document.querySelector(".header-content")
+            const top = window.pageYOffset
+            
+            if(top > 400){
+                header.style.position= "fixed"
+                header.style.backgroundColor= "var(--darkLightColor)"
+                headerContent.style.height= "60px"
+            }else{
+                header.style.position= "static"
+                header.style.backgroundColor= "transparent"
+                headerContent.style.height= "120px"
 
-        if(scroll>200){
-          document.querySelector(".sidebar").style.backgroundColor= "#191D2B"
-        }else{
-          document.querySelector(".sidebar").style.backgroundColor= "transparent"
+            }
+            
 
-        }
-      })
+        })
     </script>
-  </body>
+</body>
 </html>
