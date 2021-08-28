@@ -1,0 +1,13 @@
+.footer{
+  // background-color: red;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  h4{
+    color: var(--accentColor);
+    margin-top: 10px;
+  }
+}
