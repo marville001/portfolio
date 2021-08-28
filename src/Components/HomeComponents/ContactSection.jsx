@@ -1,8 +1,5 @@
 import React from "react";
 import Tittle from "../Tittle";
-import ProjectCard from "../ProjectCard";
-import { Link } from "react-router-dom";
-
 const ContactSection = () => {
   return (
     <div className="container" id="contact">
