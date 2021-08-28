@@ -36,6 +36,7 @@ const ContactSection = () => {
             <label htmlFor="message">Message</label>
             <textarea name="message" id="" cols="30" rows="5"></textarea>
           </div>
+          <button className="send-btn">Send Message</button>
         </div>
       </div>
     </div>
