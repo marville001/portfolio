@@ -1,6 +1,6 @@
 import React from "react";
-import Categories from "../Components/Categories";
-import MenuItems from "../Components/MenuItems";
+// import Categories from "../Components/Categories";
+// import MenuItems from "../Components/MenuItems";
 import Tittle from "../Components/Tittle";
 import portfolios from "../Components/allportfolios";
 import { useState, useEffect } from "react";

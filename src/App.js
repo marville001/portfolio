@@ -1,9 +1,9 @@
 import "./App.scss";
 import { Switch, Route } from "react-router-dom";
-import AboutPage from "./Pages/AboutPage";
+// import AboutPage from "./Pages/AboutPage";
 import PortfliosPage from "./Pages/PortfoliosPage";
-import BlogsPage from "./Pages/BlogsPage";
-import ContactPage from "./Pages/ContactPage";
+// import BlogsPage from "./Pages/BlogsPage";
+// import ContactPage from "./Pages/ContactPage";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer";
