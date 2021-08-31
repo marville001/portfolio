@@ -15,11 +15,11 @@ const Header = () => {
         <nav className={navToggle ?"open":""}>
           <div className="close-btn"><span onClick={navClick}>X</span></div>
           <a className="home" onClick={navClick} href="/">Home</a>
-          <a  onClick={navClick} href="#about">About Me</a>
-          <a onClick={navClick} href="#services">Services</a>
-          <a onClick={navClick} href="#portfolio">Portfolio</a>
-          <a onClick={navClick} href="#contact">Contact</a>
-          <a onClick={navClick} href="#about">Blogs</a>
+          <a  onClick={navClick} href="/#about">About Me</a>
+          <a onClick={navClick} href="/#services">Services</a>
+          <a onClick={navClick} href="/#portfolio">Portfolio</a>
+          <a onClick={navClick} href="/#contact">Contact</a>
+          <a onClick={navClick} href="/#about">Blogs</a>
         </nav>
         <div className="right-nav">
           <button className="challenges-btn">HIRE ME</button>

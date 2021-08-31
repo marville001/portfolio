@@ -15,7 +15,7 @@ const ProjectsSection = () => {
         </div>
       </div>
       <div className="view-more-container">
-      <Link className="view-more" to="/">View More</Link>
+      <Link className="view-more" to="/portfolios">View More</Link>
       </div>
     </div>
   );
