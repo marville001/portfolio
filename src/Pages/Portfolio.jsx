@@ -1,21 +1,9 @@
 import React from "react";
-// import Categories from "../Components/Categories";
-// import MenuItems from "../Components/MenuItems";
 import portfolios from "../Components/allportfolios";
 import { useState, useEffect } from "react";
-
-const allCategories = [
-  "All",
-  "Vanilla Js",
-  "React Js",
-  "PHP",
-  "Node Js",
-  "Mongo Db",
-  "Postgress",
-];
+import PortfoliosSection from "../Components/PortfoliosComponents/PortfoliosSection";
 
 const Portfolios =()=> {
-  const [categories, setCategories] = useState([]);
   const [menuItems, setMenuItems] = useState([]);
 
   // const filter = (name) => {
@@ -28,18 +16,14 @@ const Portfolios =()=> {
 
   useEffect(() => {
     setMenuItems(portfolios);
-    setCategories(allCategories);
   }, []);
 
   return (
     <div className="portfolios container">
       <div className="title">
-        <h1>My Portfolios</h1>
+        <h1>Projects I have done</h1>
       </div>
-      {/* <div className="portfolios-data">
-        <Categories filter={filter} categories={categories} />
-        <MenuItems menuItem={menuItems} />
-      </div> */}
+      <PortfoliosSection />
     </div>
   );
 }
