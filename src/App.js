@@ -19,7 +19,7 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/about" exact>
+            {/* <Route path="/about" exact>
               <AboutPage />
             </Route>
             <Route path="/portfolios" exact>
@@ -30,7 +30,7 @@ function App() {
             </Route>
             <Route path="/contact" exact>
               <ContactPage />
-            </Route>
+            </Route> */}
           </Switch>
       </div>
       <Footer />
