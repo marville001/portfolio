@@ -19,14 +19,15 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-            {/* <Route path="/about" exact>
-              <AboutPage />
-            </Route>
+             
             <Route path="/portfolios" exact>
               <PortfliosPage />
             </Route>
-            <Route path="/blogs" exact>
+            {/*<Route path="/blogs" exact>
               <BlogsPage />
+            </Route>
+            <Route path="/about" exact>
+              <AboutPage />
             </Route>
             <Route path="/contact" exact>
               <ContactPage />

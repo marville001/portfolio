@@ -37,10 +37,10 @@ function PortfoliosPage() {
       <div className="title">
         <Tittle title={"Portfolios"} span={"portfolios"} />
       </div>
-      <div className="portfolios-data">
+      {/* <div className="portfolios-data">
         <Categories filter={filter} categories={categories} />
         <MenuItems menuItem={menuItems} />
-      </div>
+      </div> */}
     </div>
   );
 }
