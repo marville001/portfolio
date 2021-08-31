@@ -3,7 +3,11 @@ import PortfolioCard from "./PortfolioCard";
 
 const PortfoliosSection = () => {
   return (
-    <div>
+    <div className="portfolios-items">
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
       <PortfolioCard />
     </div>
   );
