@@ -2,4 +2,4 @@
 
 ### This is my official portfolio
 
-To View the webcite click here -> [**Martin Mwangi**](martinmwangi.netlify.com)
+To View the website click here -> [**Martin Mwangi**](martinmwangi.netlify.com)
