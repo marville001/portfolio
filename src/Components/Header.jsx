@@ -1,5 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import {motion} from 'framer-motion'
+
+const buttonVariants = {
+  hover:{
+    boxShadow:"0px 0px 8px var(--accentColor)",
+            scale: 1.1
+  }
+}
+
 const Header = () => {
   const [navToggle, setNavToggle] = useState(false);
 
@@ -7,7 +17,10 @@ const Header = () => {
     setNavToggle(!navToggle);
   };
   return (
-    <div className="header" style={{}}>
+    <motion.div className="header" style={{}}
+    initial={{y: -200}}
+    animate={{y: 0}}
+    >
       <div className="header-content container">
         <Link to="/" className="logo">
           <span>Martin</span> Mwangi
@@ -22,7 +35,10 @@ const Header = () => {
           <a onClick={navClick} href="/#about">Blogs</a>
         </nav>
         <div className="right-nav">
-          <button className="challenges-btn">HIRE ME</button>
+          <motion.button className="challenges-btn"
+          variants={buttonVariants}
+          whileHover="hover"
+          >HIRE ME</motion.button>
 
           <div className="nav-btn" onClick={navClick}>
             <div className="lines-1"></div>
@@ -31,7 +47,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
