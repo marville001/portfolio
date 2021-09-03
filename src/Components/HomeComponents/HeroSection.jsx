@@ -20,10 +20,22 @@ const containerVariants = {
 };
 
 const buttonVariants = {
+  hidden:{
+    x:"-100vh",
+    opacity: 0,
+  },
+  visible:{
+    x: 0,
+    opacity: 1,
+    transition:{
+      delay:0.5,
+      type:"spring", stiffness: 120
+    }
+  },
   hover: {
     textShadow: "0px 0px 8px var(--accentColor)",
     boxShadow: "0px 0px 8px var(--accentColor)",
-    scale: 1.1,
+    scale: 1.1
   },
 };
 
@@ -47,6 +59,8 @@ const HeroSection = () => {
           </p>
           <motion.a target="_blank" rel="noreferrer" href={resume} download="resume.pdf" className="download-resume-btn"
            variants={buttonVariants}
+           initial="hidden"
+           animate="visible"
            whileHover="hover"
           >Download Resume</motion.a>
         </div>
