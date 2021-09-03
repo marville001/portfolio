@@ -6,15 +6,18 @@ import {motion} from "framer-motion"
 
 const containerVariants = {
   hidden: {
-    x: "-100vh"
+    x: "200vh",
+    opacity: 0
   },
   visible: {
-    x: 0
+    x: 0,
+    opacity: 1
   },
 };
 
 const buttonVariants = {
   hover: {
+    textShadow: "0px 0px 8px var(--accentColor)",
     boxShadow: "0px 0px 8px var(--accentColor)",
     scale: 1.1,
   },
@@ -26,6 +29,10 @@ const HeroSection = () => {
         variants={containerVariants}
         initial ="hidden"
         animate ="visible"
+        transition={{
+          type:"spring",
+          stiffness: 120
+        }}
         >
         <div className="details">
           <h2 className="greetings">Hi, my name is</h2>
@@ -38,10 +45,8 @@ const HeroSection = () => {
             Computer Science.
           </p>
           <motion.a target="_blank" rel="noreferrer" href={resume} download="resume.pdf" className="download-resume-btn"
-           whileHover= {{
-             boxShadow :" 0px 0px 8px var(--accentColor)",
-             scale: 1.1
-           }}
+           variants={buttonVariants}
+           whileHover="hover"
           >Download Resume</motion.a>
         </div>
       </motion.div>
