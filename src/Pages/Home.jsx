@@ -6,10 +6,12 @@ import ProjectsSection from "../Components/HomeComponents/ProjectsSection";
 import ContactSection from "../Components/HomeComponents/ContactSection";
 const Home = () => {
   return (
-    <div className="home">
+    <div
+      className="home"
+    >
       <HeroSection />
       <AboutSection />
-      <ServicesSection/>
+      <ServicesSection />
       <ProjectsSection />
       <ContactSection />
     </div>
