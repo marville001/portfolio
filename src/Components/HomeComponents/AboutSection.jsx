@@ -1,6 +1,6 @@
 import React from "react";
 import Tittle from "../Tittle";
-import me from "../../img/Martin.png";
+import me from "../../img/me.jpg";
 
 import { motion } from "framer-motion";
 
@@ -10,6 +10,11 @@ const containerVariants = {
   },
   visible: {
     x: 0,
+    transition:{
+      type: "spring",
+      stiffness: 120,
+      delay: 0.6,
+    }
   },
 };
 
@@ -21,11 +26,7 @@ const AboutSection = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      transition={{
-        type: "spring",
-        stiffness: 120,
-        delay: 0.6,
-      }}
+      
     >
       <div className="about">
         <Tittle title="About me" index="01" />
@@ -76,10 +77,6 @@ const AboutSection = () => {
           <motion.div
             className="about-image"
             initial={{boxShadow:"0px 0px 8px var(--accentColor)"}}
-            whileHover={{
-              scale: 1.1,
-              originX: 0
-            }}
           >
             <motion.img src={me} alt="Martin Mwangi Wanjiku" />
           </motion.div>

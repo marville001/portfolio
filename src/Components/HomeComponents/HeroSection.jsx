@@ -11,7 +11,11 @@ const containerVariants = {
   },
   visible: {
     x: 0,
-    opacity: 1
+    opacity: 1,
+    transition:{
+      type:"spring",
+      stiffness: 120
+    }
   },
 };
 
@@ -29,10 +33,7 @@ const HeroSection = () => {
         variants={containerVariants}
         initial ="hidden"
         animate ="visible"
-        transition={{
-          type:"spring",
-          stiffness: 120
-        }}
+        
         >
         <div className="details">
           <h2 className="greetings">Hi, my name is</h2>
