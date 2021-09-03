@@ -1,10 +1,32 @@
 import React from 'react'
 
 import resume from '../../assets/Martin Mwangi Wanjiku  CV.pdf'
+import {motion} from "framer-motion"
+
+
+const containerVariants = {
+  hidden: {
+    x: "-100vh"
+  },
+  visible: {
+    x: 0
+  },
+};
+
+const buttonVariants = {
+  hover: {
+    boxShadow: "0px 0px 8px var(--accentColor)",
+    scale: 1.1,
+  },
+};
 
 const HeroSection = () => {
     return (
-        <div className="home-hero container">
+        <motion.div className="home-hero container"
+        variants={containerVariants}
+        initial ="hidden"
+        animate ="visible"
+        >
         <div className="details">
           <h2 className="greetings">Hi, my name is</h2>
           <h1 className="name">Martin Mwangi</h1>
@@ -15,9 +37,14 @@ const HeroSection = () => {
             at Dedan Kimathi University of Technology with a 1st Class honor in
             Computer Science.
           </p>
-          <a target="_blank" rel="noreferrer" href={resume} download="resume.pdf" className="download-resume-btn">Download Resume</a>
+          <motion.a target="_blank" rel="noreferrer" href={resume} download="resume.pdf" className="download-resume-btn"
+           whileHover= {{
+             boxShadow :" 0px 0px 8px var(--accentColor)",
+             scale: 1.1
+           }}
+          >Download Resume</motion.a>
         </div>
-      </div>
+      </motion.div>
     )
 }
 
