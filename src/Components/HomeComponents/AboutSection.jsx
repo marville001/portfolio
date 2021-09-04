@@ -1,34 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Tittle from "../Tittle";
 import me from "../../img/me.jpg";
 
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const containerVariants = {
-  hidden: {
-    x: "-200vh",
-  },
-  visible: {
-    x: 0,
-    transition:{
-      type: "spring",
-      stiffness: 120,
-      delay: 0.6,
-    }
-  },
-};
 
 const AboutSection = () => {
+  const animation = useAnimation();
+  const { ref, inView } = useInView({ threshold:0 });
+
+  useEffect(() => {
+    console.log("In view", inView);
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          stiffness: 120
+        },
+      });
+    }
+
+    if (!inView) {
+      animation.start({
+        x: "-100vw"
+      });
+    }
+  }, [inView]);
   return (
-    <motion.div
+    <div
+      ref={ref}
       className="container"
       id="about"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
       
     >
-      <div className="about">
+      <motion.div  className="about"
+      animate={animation}
+      >
         <Tittle title="About me" index="01" />
         <div className="about-content">
           <div className="about-description">
@@ -76,13 +85,13 @@ const AboutSection = () => {
           </div>
           <motion.div
             className="about-image"
-            initial={{boxShadow:"0px 0px 8px var(--accentColor)"}}
+            initial={{ boxShadow: "0px 0px 8px var(--accentColor)" }}
           >
             <motion.img src={me} alt="Martin Mwangi Wanjiku" />
           </motion.div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 
