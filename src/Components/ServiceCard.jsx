@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
 const ServiceCard = ({service:{ icon, title, description }}) => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0 });
