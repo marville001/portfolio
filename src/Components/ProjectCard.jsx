@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import project1 from "../img/Project1.png"
 const ProjectCard = () => {
+    const animation = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0 });
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: "tween",
+          duration: 0.5,
+        },
+      });
+    }
+  }, [inView, animation]);
     return (
-        <div className="project-card">
+        <motion.div ref={ref} className="project-card"
+        initial={{ opacity: 0, y: 50 }}
+        animate={animation}
+        >
             <div className="project-content">
                 <div>
                     <p class="project-overline">Featured Project</p>
@@ -24,7 +43,7 @@ const ProjectCard = () => {
                     <img src={project1} alt="Project Name" />
                 </a>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

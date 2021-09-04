@@ -16,7 +16,6 @@ const PortfoliosSection = () => {
         transition: {
           type: "tween",
           duration: 1.5,
-          delay: 1.5,
         },
       });
     }
