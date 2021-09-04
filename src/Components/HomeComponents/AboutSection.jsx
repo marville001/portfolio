@@ -27,7 +27,7 @@ const AboutSection = () => {
         x: "-100vw"
       });
     }
-  }, [inView]);
+  }, [inView, animation]);
   return (
     <div
       ref={ref}
