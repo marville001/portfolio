@@ -43,9 +43,7 @@ const ServicesSection = () => {
         opacity: 1,
         transition: {
           type: "tween",
-          duration: 1.5,
-          stiffness: 120,
-          bounce: 0.1,
+          duration: 1.5
         },
       });
     }

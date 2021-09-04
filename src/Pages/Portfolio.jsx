@@ -1,32 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PortfoliosSection from "../Components/PortfoliosComponents/PortfoliosSection";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const titleVariants = {
-  hidden: {
-    y: -50,
-  },
-  visible: {
-    y: [5, -30, 5, 0],
-    transition: {
-      type: "spring",
-      stiffness: 300,
-    },
-  },
-};
 const Portfolios = () => {
+  const animation = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0 });
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: "tween",
+          duration: 1.5,
+        },
+      });
+    }
+  }, [inView, animation]);
   return (
-    <div className="portfolios container">
-      <motion.div
+    <motion.div ref={ref} className="portfolios container"
+        initial={{ y: 100, opacity: 0 }}
+        animate={animation}
+    >
+      <div
         className="title"
-        variants={titleVariants}
-        initial="hidden"
-        animate="visible"
+        
       >
         <h1>Projects I have done</h1>
-      </motion.div>
+      </div>
       <PortfoliosSection />
-    </div>
+    </motion.div>
   );
 };
 

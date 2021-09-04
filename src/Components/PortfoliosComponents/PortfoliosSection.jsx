@@ -1,29 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import PortfolioCard from "./PortfolioCard";
 
-import { motion } from "framer-motion";
-
-const containerVariants = {
-  hidden: {
-    x: "100vw",
-    opacity: 0
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120
-    }
-  },
-};
-
 const PortfoliosSection = () => {
+  const animation = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0 });
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: "tween",
+          duration: 1.5,
+        },
+      });
+    }
+  }, [inView, animation]);
+  
   return (
-    <motion.div className="portfolios-items" 
-    variants={containerVariants}
-        initial="hidden"
-        animate="visible"
+    <motion.div
+      ref={ref}
+      className="portfolios-items"
+      initial={{ y: 100, opacity: 0 }}
+      animate={animation}
     >
       <PortfolioCard />
       <PortfolioCard />
