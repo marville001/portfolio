@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Tittle from "../Tittle";
-import ServiceCard from "../ServiceCard";
+
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const services = [
   {
@@ -14,7 +16,8 @@ const services = [
     title: "Business Strategy",
     description:
       "We discuss what you are trying to achieve, and place goals on your website planning how to achieve that. For example, a product might use a small website to collect initial customers which can be grown into a much larger website later on with leads ready-to-go.",
-  },{
+  },
+  {
     icon: "https://img.icons8.com/clouds/100/000000/domain.png",
     title: "User Experience Design",
     description:
@@ -29,17 +32,51 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const animation = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0 });
+
+  useEffect(() => {
+    console.log("In view", inView);
+    if (inView) {
+      animation.start({
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: "spring",
+          stiffness: 120,
+          staggerChildren: 0.2,
+          when: "beforeChildren",
+        },
+      });
+    }
+
+    if (!inView) {
+      animation.start({
+        x: "-100vw",
+        opacity: 0,
+      });
+    }
+  }, [inView, animation]);
+
   return (
-    <div className="container" id="services">
-      <div className="services" >
+    <div ref={ref} className="container" id="services">
+      <motion.div className="services" animate={animation}>
         <Tittle title="Services" index="02" />
 
         <div className="services-cards">
           {services.map((service) => (
-            <ServiceCard  service={service}/>
+            <motion.div
+              className="service-card"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <img className="service-icon" src={service.icon} alt={service.title} />
+              <h2 className="s-title">{service.title}</h2>
+              <p className="s-text">{service.description}</p>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
