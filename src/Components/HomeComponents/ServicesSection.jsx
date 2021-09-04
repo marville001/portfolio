@@ -3,6 +3,7 @@ import Tittle from "../Tittle";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ServiceCard from "../ServiceCard";
 
 const services = [
   {
@@ -36,44 +37,32 @@ const ServicesSection = () => {
   const { ref, inView } = useInView({ threshold: 0 });
 
   useEffect(() => {
-    console.log("In view", inView);
     if (inView) {
       animation.start({
-        x: 0,
+        y: 0,
         opacity: 1,
         transition: {
-          type: "spring",
+          type: "tween",
+          duration: 1.5,
           stiffness: 120,
-          staggerChildren: 0.2,
-          when: "beforeChildren",
+          bounce: 0.1,
         },
-      });
-    }
-
-    if (!inView) {
-      animation.start({
-        x: "-100vw",
-        opacity: 0,
       });
     }
   }, [inView, animation]);
 
   return (
     <div ref={ref} className="container" id="services">
-      <motion.div className="services" animate={animation}>
+      <motion.div
+        className="services"
+        initial={{ y: 100, opacity: 0 }}
+        animate={animation}
+      >
         <Tittle title="Services" index="02" />
 
         <div className="services-cards">
           {services.map((service) => (
-            <motion.div
-              className="service-card"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
-              <img className="service-icon" src={service.icon} alt={service.title} />
-              <h2 className="s-title">{service.title}</h2>
-              <p className="s-text">{service.description}</p>
-            </motion.div>
+            <ServiceCard service={service} />
           ))}
         </div>
       </motion.div>

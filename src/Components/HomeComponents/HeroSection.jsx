@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {
-    x: "100vw",
+    y: -100,
     opacity: 0,
   },
   visible: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       type: "spring",
@@ -21,11 +21,11 @@ const containerVariants = {
 
 const buttonVariants = {
   hidden: {
-    x: "-100vh",
+    y: -100,
     opacity: 0,
   },
   visible: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       delay: 0.5,
@@ -46,6 +46,9 @@ const childVariants = {
   },
   visible: {
     opacity: 1,
+    transition:{
+      delay: 0.5
+    }
   },
 };
 

@@ -11,23 +11,16 @@ const AboutSection = () => {
   const { ref, inView } = useInView({ threshold:0 });
 
   useEffect(() => {
-    console.log("In view", inView);
     if (inView) {
       animation.start({
-        x: 0,
+        y: 0,
         opacity: 1,
         transition: {
-          type: "spring",
+          type: "tween",
+          duration: 1.5,
           stiffness: 120,
           bounce:0.1
         },
-      });
-    }
-
-    if (!inView) {
-      animation.start({
-        x: "-100vw",
-        opacity: 0
       });
     }
   }, [inView, animation]);
@@ -39,6 +32,7 @@ const AboutSection = () => {
       
     >
       <motion.div  className="about"
+      initial={{y: 100, opacity:0}}
       animate={animation}
       >
         <Tittle title="About me" index="01" />
