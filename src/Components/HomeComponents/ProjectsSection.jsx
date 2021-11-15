@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 import project1 from "../../img/Project1.png"
 import faceDetectorImg from "../../img/portImages/faceDetector.png"
 import covidTracker from "../../img/portImages/covidTracker.png"
-import budgetApp from "../../img/portImages/budgetApp.png"
-import agencySite from "../../img/portImages/agencySite.png"
-import ashop from "../../img/portImages/ashop.png"
+// import budgetApp from "../../img/portImages/budgetApp.png"
+// import agencySite from "../../img/portImages/agencySite.png"
+// import ashop from "../../img/portImages/ashop.png"
 const ProjectsSection = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0 });
