@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PortfoliosSection from "../Components/PortfoliosComponents/PortfoliosSection";
 
 const Portfolios = () => {
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
   return (
     <div className="portfolios container">
       <div className="title">
