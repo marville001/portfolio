@@ -49,6 +49,9 @@ const Header = () => {
           <a onClick={navClick} href="/#about">
             Blogs
           </a>
+          <a onClick={navClick} href="/archive">
+            Archive
+          </a>
         </nav>
         <div className="right-nav">
           <a
