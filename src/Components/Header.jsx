@@ -40,7 +40,7 @@ const Header = () => {
           <a onClick={navClick} href="/#services">
             Services
           </a>
-          <a onClick={navClick} href="/#portfolio">
+          <a onClick={navClick} href="/portfolios">
             Portfolio
           </a>
           <a onClick={navClick} href="/#contact">
