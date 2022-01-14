@@ -16,7 +16,7 @@
 }
 
 .home {
-  // padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .home-hero {
   display: grid;
@@ -516,11 +516,19 @@ CONTACT SECTION START
     line-height: 20px;
   }
 
+  .divs-container{
+    display: flex;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
   .contact-form {
+    flex: 1;
     margin: 30px 0px;
     .contact-form-inputs {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
 
       @include phone() {
         grid-template-columns: 1fr;
@@ -569,6 +577,11 @@ CONTACT SECTION START
       cursor: pointer;
 
     }
+  }
+  
+  .map-frame{
+    flex: 1;
+    padding: 20px 10px;
   }
 }
 
