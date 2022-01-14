@@ -27,6 +27,14 @@ html{
   scroll-behavior: smooth;
 }
 
+body {
+  color: #a4acc4;
+  overflow-x: hidden;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.2rem;
+  background-color: var(--darkColor);
+}
+
 body::-webkit-scrollbar {
   width: 5px;
 }
@@ -38,13 +46,6 @@ body::-webkit-scrollbar-track {
   background-color: var(--darkColor);
 }
 
-body {
-  color: #a4acc4;
-  overflow-x: hidden;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-size: 1.2rem;
-  background-color: var(--darkColor);
-}
 span {
   color: #037fff;
 }

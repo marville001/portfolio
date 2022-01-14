@@ -51,13 +51,19 @@ const Header = () => {
           </a>
         </nav>
         <div className="right-nav">
-          <motion.button
-            className="challenges-btn"
-            variants={buttonVariants}
-            whileHover="hover"
+          <a
+            href="https://www.fiverr.com/martin_devs/create-node-js-reactjs-application"
+            target="_blank"
+            rel="noreferrer"
           >
-            HIRE ME
-          </motion.button>
+            <motion.button
+              className="challenges-btn"
+              variants={buttonVariants}
+              whileHover="hover"
+            >
+              HIRE ME
+            </motion.button>
+          </a>
 
           <div className="nav-btn" onClick={navClick}>
             <div className="lines-1"></div>
