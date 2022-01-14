@@ -24,7 +24,7 @@ const ContactSection = () => {
             </div>
             <div className="input-container">
               <label htmlFor="message">Message</label>
-              <textarea id="message" cols="30" rows="5"></textarea>
+              <textarea id="message" cols="30" rows="7"></textarea>
             </div>
             <button className="send-btn">Send Message</button>
           </div>
